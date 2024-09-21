@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="{%static 'img/image.png'%}" alt="Bootstrap" width="30" height="24"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}" style="color: black;">Home</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <a class="btn btn-outline-success" type="submit" href="{% url 'logout' %}" style="color: black; " >logout</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+<!--   top portion navbar. bottom portion profile-->
+      <form action="" >
+        <div class="container rounded bg-white mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-3 border-right">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="{% static 'img/image.png' %}"><span class="font-weight-bold">Linkedin</span><span class="text-black-50">{{user.email}}</span><span> </span></div>
+                </div>
+                <div class="col-md-5 border-right">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">Profile</h4>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-12"><label class="labels">Full Name: <b>{{user.full_name}}</b></label></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12"><label class="labels">Address: <b>   {{user.address}}</b></label></div><br>
+                            <div class="col-md-12"><label class="labels">State: <b>   {{user.state}}</b></label></div><br>
+                            <div class="col-md-12"><label class="labels">Education: <b>   {{user.education}}</b></label></div><br>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6"><label class="labels">Country: <b>   {{user.country}}</b></label></div>
+                            <div class="col-md-6"><label class="labels">State: <b>   {{user.state}}</b></label></div>
+                        </div>
+                        <div class="mt-5 text-center"><a class="btn btn-primary profile-button" type="submit" href="{% url 'update' %}">Update</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center experience"><span><b>Experience</b></span></div><br>
+                        <div class="col-md-12"><label class="labels">Experience in Designing: <br></label></div> <label><b>   {{user.experience}}</b></label><br>    
+                        <div class="col-md-12"><label class="labels">Add certificate image: </label> <br><img src="{{user.profile_image.url}}" width="450px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</body>

@@ -1,0 +1,103 @@
+
+<!doctype html>
+{% load static %}
+<html lang="en"> 
+
+ <head> 
+
+  <meta charset="UTF-8"> 
+
+  <title>Register</title> 
+
+  <link rel="stylesheet" href="{%static 'css/loginpage.css'%}"> 
+
+ </head> 
+
+ <body> 
+
+  <section> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+    <span></span> <span></span> 
+
+   <div class="signin"> 
+
+    <div class="content"> 
+
+     <h2>Register </h2> 
+      {% if messages %}
+            {%for message in messages%}
+              <li>{{message}}</li>
+            {%endfor%}
+      {% endif %}
+
+     <div class="form" > 
+        <form action="" method="post" enctype="multipart/form-data">
+          {% csrf_token %} 
+      <div class="inputBox"> 
+
+       <input type="text" name="username" required> <i>Username</i> 
+
+      </div> <br>
+
+      <div class="inputBox"> 
+
+       <input type="password" name="password" required> <i>Password</i> 
+
+      </div> <br>
+      <div class="inputBox"> 
+
+        <input type="password" name="c_password" required> <i>Confirm Password</i> 
+ 
+       </div> 
+      <br>
+      <div class="inputBox"> 
+
+       <input type="submit" value="REGISTER" > 
+
+      </div> 
+    </form>
+     </div> 
+
+    </div> 
+
+   </div> 
+
+  </section> 
+
+ </body>
+
+</html>
